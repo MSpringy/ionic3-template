@@ -1,0 +1,174 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+
+/*
+ * 重置默认样式
+ * @author mcy
+ * @Date:2019-08-07
+ * @Last Modified by: mcy
+ * @Last Modified time: 2019-08-07
+ */
+
+
+
+ /* 去掉所有元素的外边距 */
+ html, body, div, span, h1,h2,h3,h4,h5,h6,p, label, pre, a,
+ img, ul, li, form, input, table, tbody, tfoot, thead, tr, td, th,
+ audio, video{
+     margin: 0;
+     padding: 0;
+ }
+
+ html, ion-nav,ion-tabs{
+     background: #fff;
+ }
+
+
+ /* 统一全局字体 */
+ body{
+    font-family:'SimSun' PingFang -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #222;
+    background: #fff;
+ }
+ 
+ /* 列表元素去掉默认的列表样式 */
+ ol, ul {
+     list-style: none;
+ }
+ /* Table元素的边框折叠 */
+ table {
+     border-collapse: collapse;
+     border-spacing: 0;
+ }
+ /* 去掉默认的下划线 */
+ a{
+     text-decoration: none;
+ }
+ /* 去掉input自带的边缘效果和背景颜色 */
+ input{
+     outline: none;
+     background: #fff;
+ }
+
+ .grid,.row,.col{
+     padding: 0;
+ }
+
+
+
+ /* 字体大小 */ 
+/*320宽度 */      /* 375宽度 */
+$px9_39:0.7825rem;  //11px
+$px11_09:0.9242rem; //13px
+$px11_59:0.9658rem; //13.5px
+$px11_95:0.9958rem; //14px
+$px12_8:1.067rem;   //15px
+$px13_66:1.1383rem; //16px
+$px14_51:1.209rem;  //17px
+$px15_36:1.28rem;   //18px
+$px16_22:1.3516rem; //19px
+$px17_92:1.49rem;   //21px
+$px20_48:1.7067rem; //24px
+
+
+/* 标题栏 */
+.toolbar-title-ios{
+    font-size: $px16_22;
+    font-weight: normal;
+}
+
+
+
+/* 返回icon */
+.ion-ios-arrow-back:before{
+    content:'';
+    display: block;
+    width: px2rem(10px);
+    height: px2rem(16px);
+    background: url('../assets/imgs/back.png') center center no-repeat;
+    background-size:px2rem(8px) px2rem(15px); 
+}
+
+ 
+ $base_rem:12px;
+
+ /* iphone5 宽度 320 */
+ @media screen  and (max-width:340px){
+     html{
+         font-size: 12px;
+     }
+ }
+ /* iphone6,7,8,x 宽度 375 */
+ @media screen and (min-width:341px) and (max-width:410px){
+    
+     html{
+         font-size:13.89px;
+     }
+ }
+ /* iphone6,7,8plus 宽度 414*/
+ @media screen and (min-width:411px) and (max-width:600px) {
+    
+     html{
+         font-size:15.45px;
+     }
+ }
+ 
+ /* ipad 宽度 768*/
+ @media screen and (min-width:601px) and (max-width:780px){
+    
+     html{
+         font-size:28.48px;
+     }
+ }
+ /* ipad pro 宽度 1024*/
+ @media screen and (min-width:781px) {
+     
+     html{
+         font-size:39.06px;
+     }
+ }
+ 
+ @function px2rem($px){
+     
+     @return ($px/$base_rem)+rem;
+ }
+
+
+
+/*  loading */
+ .loading-ios .loading-wrapper{
+    max-width: 80%;
+    padding: px2rem(20px) px2rem(30px);
+ }
+ .loading-ios .loading-content{
+     font-size: $px14_51;
+ }
+
+/*  alert */
+.alert-ios .alert-button{
+    height: 34px;
+    .button-inner{
+        font-size: $px13_66;
+    }
+}
+
+/* toast */
+.toast-ios .toast-message{
+    font-size: $px14_51;
+    padding: px2rem(10px) px2rem(15px);
+}
+
+/* ion-content内边距 */
+ .scroll-content{
+    padding: px2rem(12px);
+}
+
+/* 头部标题靠左 */
+.toolbar-ios ion-title{
+    padding: 0 px2rem(90px) px2rem(1px) px2rem(35px);
+}
+.toolbar-title-ios{
+    text-align: left;
+}
